@@ -42,7 +42,7 @@ int main()
 			continue;
 		}
 		flatbuffers::FlatBufferBuilder Builder(1024);
-		auto InputData = InputData::CreateData(Builder, Input);
+		auto InputData = Move::CreateInputData(Builder, Input);
 		Builder.Finish(InputData);
 
 		int PacketSize = (int)Builder.GetSize();
@@ -55,7 +55,7 @@ int main()
 		PacketSize = ntohl(PacketSize);
 		RecvBytes = recv(ServerSock, RecvBuffer, PacketSize, MSG_WAITALL);
 
-		auto Data = Position::GetData(RecvBuffer);
+		auto Data = Move::GetPositionData(RecvBuffer);
 
 		X = Data->x();
 		Y = Data->y();

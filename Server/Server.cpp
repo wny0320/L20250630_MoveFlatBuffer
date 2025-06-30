@@ -48,7 +48,7 @@ int main()
 		system("cls");
 		RecvBytes = recv(ClientSock, RecvBuffer, PacketSize, MSG_WAITALL);
 
-		auto InputData = InputData::GetData(RecvBuffer);
+		auto InputData = Move::GetInputData(RecvBuffer);
 
 		switch (InputData->input())
 		{
@@ -74,7 +74,7 @@ int main()
 		std::cout << "*";
 
 		flatbuffers::FlatBufferBuilder Builder(1024);
-		auto Data = Position::CreateData(Builder, X, Y);
+		auto Data = Move::CreatePositionData(Builder, X, Y);
 		Builder.Finish(Data);
 
 		PacketSize = (int)Builder.GetSize();
