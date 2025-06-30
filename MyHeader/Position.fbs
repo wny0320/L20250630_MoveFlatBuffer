@@ -1,0 +1,8 @@
+namespace Position;
+
+table Data{
+	x:int;
+	y:int;
+}
+
+root_type Data;

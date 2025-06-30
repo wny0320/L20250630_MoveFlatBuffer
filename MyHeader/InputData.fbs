@@ -1,0 +1,7 @@
+namespace InputData;
+
+table Data{
+	input:byte;
+}
+
+root_type Data;
