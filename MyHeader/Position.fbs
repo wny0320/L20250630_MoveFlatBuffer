@@ -1,8 +1,0 @@
-namespace Move;
-
-table PositionData{
-	x:int;
-	y:int;
-}
-
-root_type PositionData;

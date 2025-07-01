@@ -1,7 +1,0 @@
-namespace Move;
-
-table InputData{
-	input:ubyte;
-}
-
-root_type InputData;

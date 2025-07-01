@@ -7,7 +7,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Position.fbs" />
-    <None Include="InputData.fbs" />
+    <None Include="UserEvents.fbs" />
   </ItemGroup>
 </Project>
